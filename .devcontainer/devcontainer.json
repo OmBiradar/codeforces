@@ -1,0 +1,21 @@
+{
+    "name": "C/C++ Development",
+    "image": "gcc:latest",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-extension-pack"
+            ]
+        }
+    },
+    "remoteUser": "root",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "configureZshAsDefaultShell": true,
+            "username": "vscode"
+        }
+    },
+    "postCreateCommand": "gcc --version && g++ --version"
+}
