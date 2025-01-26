@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsolved Problems</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Unsolved Problems</h1>
+    <div style="width: 80%; margin: 0 auto;">
+        <canvas id="difficultyChart"></canvas>
+    </div>
+    <label for="username">Select Friend:</label>
+    <select id="username" onchange="displayProblemsForUser()">
+        <!-- Options will be populated dynamically -->
+    </select>
+    <label for="sort">Sort by:</label>
+    <select id="sort" onchange="displayProblemsForUser()">
+        <option value="friend">Friend</option>
+        <option value="rating-asc">Rating (Ascending)</option>
+        <option value="rating-desc">Rating (Descending)</option>
+    </select>
+    <div id="problems-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>

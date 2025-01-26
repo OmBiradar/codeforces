@@ -1,11 +1,13 @@
 {
-    "name": "C/C++ Development",
-    "image": "gcc:latest",
+    "name": "C/C++ and Python Development",
+    "image": "mcr.microsoft.com/devcontainers/cpp:debian",
     "customizations": {
         "vscode": {
             "extensions": [
                 "ms-vscode.cpptools",
-                "ms-vscode.cpptools-extension-pack"
+                "ms-vscode.cpptools-extension-pack",
+                "ms-python.python",
+                "ms-python.vscode-pylance"
             ]
         }
     },
@@ -15,7 +17,11 @@
             "installZsh": true,
             "configureZshAsDefaultShell": true,
             "username": "vscode"
+        },
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.11",
+            "installTools": true
         }
     },
-    "postCreateCommand": "gcc --version && g++ --version"
+    "postCreateCommand": "gcc --version && g++ --version && python --version && pip install requests python-dotenv"
 }
